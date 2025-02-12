@@ -1,1 +1,9 @@
 Django==4.2.19
+deepface
+pillow
+requests
+gunicorn
+python-decouple
+dj-database-url
+psycopg[binary]
+pscopg2
