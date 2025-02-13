@@ -1,11 +1,26 @@
 
-{% if match %}
+{% comment %} {% if match %}
     <h2>Face Matched!</h2>
     <p>Recognized as: {{ name }}</p>
 {% else %}
     <h2>No Match Found</h2>
 {% endif %}
 
-<a href="{% url 'faceapp:recognize_face' %}">Try Again</a>
+<a href="{% url 'faceapp:recognize_face' %}">Try Again</a> {% endcomment %}
 
+
+<h2>Recognition Results</h2>
+{% if match %}
+    <ul>
+        {% for result in results %}
+            <li>{{ result }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No Match Found</p>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+{% endif %}
+<a href="{% url 'faceapp:recognize_face' %}">Try Again</a>
 

@@ -1,3 +1,11 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import RegisteredFace, RecognitionLog
+
+
+admin.site.register(RegisteredFace)
+admin.site.register(RecognitionLog)
+
+
+
+# sherif - faceapp

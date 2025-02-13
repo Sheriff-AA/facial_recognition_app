@@ -2,6 +2,7 @@ from django.db import models
 import os
 import numpy as np
 import face_recognition
+from django.utils.timezone import now
 from django.core.files.storage import default_storage
 from django.conf import settings
 
@@ -34,4 +35,16 @@ class RegisteredFace(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class RecognitionLog(models.Model):
+    name = models.CharField(max_length=255)  # Recognized person's name
+    # image = models.ImageField(upload_to='logs/')  # Store recognized image
+    confidence = models.FloatField()  # Similarity score
+    timestamp = models.DateTimeField(default=now)  # Auto timestamp
+
+    def __str__(self):
+        return f"{self.name} recognized at {self.timestamp}"
+    
+
 
