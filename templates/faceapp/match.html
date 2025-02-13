@@ -1,0 +1,11 @@
+
+{% if match %}
+    <h2>Face Matched!</h2>
+    <p>Recognized as: {{ name }}</p>
+{% else %}
+    <h2>No Match Found</h2>
+{% endif %}
+
+<a href="{% url 'faceapp:recognize_face' %}">Try Again</a>
+
+

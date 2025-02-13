@@ -1,5 +1,4 @@
 Django==4.2.19
-deepface
 pillow
 requests
 gunicorn
@@ -7,3 +6,8 @@ python-decouple
 dj-database-url
 psycopg[binary]
 pscopg2
+face_recognition
+dlib
+Cmake
+dlib-19.24.99-cp312-cp312-win_amd64.whl
+

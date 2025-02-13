@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y \
     libjpeg-dev \
     # for CairoSVG
     libcairo2 \
+    cmake\
     # other
     gcc \
     && rm -rf /var/lib/apt/lists/*
